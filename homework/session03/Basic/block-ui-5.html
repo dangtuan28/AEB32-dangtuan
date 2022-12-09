@@ -6,57 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-    .div__parrent1{
+      .div__parrent1 {
         height: 40px;
         display: flex;
-       /* width: 100%; */
-     /* align-items: center; */
-      text-align: center;
-       /* justify-content: center; */
-        
-        
-    }
-    .div__HOME{ 
+        /* width: 100%; */
+        /* align-items: center; */
+        text-align: center;
+        /* justify-content: center; */
+      }
+      .div__ABOUT,
+      .div__BLOG,
+      .div__FEATURE,
+      .div__GALLERY,
+      .div__HOME,
+      .div__SERVICE {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .div__HOME {
         flex: auto;
         background-color: rgba(0, 157, 255, 0.916);
-      
-      /* text-align: center;
+
+        /* text-align: center;
        */
-        
-    }
-    .div__ABOUT{
+      }
+      .div__ABOUT {
         flex: 0.2%;
         background-color: red;
-
-    }
-    .div__FEATURE{
-      flex: auto;
+      }
+      .div__FEATURE {
+        flex: auto;
         background-color: rgba(0, 128, 0, 0.567);
-
-    }
-    .div__SERVICE{
-      flex: auto;
+      }
+      .div__SERVICE {
+        flex: auto;
         background-color: yellow;
-
-    }
-    .div__GALLERY{
-      flex: auto;
+      }
+      .div__GALLERY {
+        flex: auto;
         background-color: rgba(155, 52, 52, 0.911);
-
-    }
-    .div__BLOG{
-      flex: auto;
+      }
+      .div__BLOG {
+        flex: auto;
         background-color: rgba(255, 20, 145, 0.319);
-
-    }
-
-
-
+      }
     </style>
   </head>
-  <body >
-    <div class="div__parrent1 ">
-      <div class="div__HOME ">HOME</div>
+  <body>
+    <div class="div__parrent1">
+      <div class="div__HOME">HOME</div>
       <div class="div__ABOUT">ABOUT</div>
       <div class="div__FEATURE">FEATURE</div>
       <div class="div__SERVICE">SERVICE</div>

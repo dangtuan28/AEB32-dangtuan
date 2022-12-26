@@ -9,45 +9,96 @@
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-   </header>
+  <header class="bg__ccc p-3 rounded-3">
+    <iframe
+      src="./header.html"
+      frameborder="0"
+      class="h__55px w-100 rounded-3"
+    ></iframe>
+  </header>
+  <form class="row g-3 w-50 m-auto my-3" onsubmit="return false">
+    <div class="col-md-6">
+      <label for="inputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputName" />
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" />
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Avatar</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputAvatar"
+        placeholder="https://xxxxxx"
+      />
+    </div>
+    <button class="btn btn-success" onclick="handleSubit()">Submit</button>
+    <!-- <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputAddress2"
+        placeholder="Apartment, studio, or floor"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" />
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" />
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" />
+        <label class="form-check-label" for="gridCheck"> Check me out </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" onclick="handleSignin()" >Sign in</button>
+    </div> -->
+  </form>
+  <footer class="bg__ccc text-center fixed-bottom rounded-3">Footer</footer>
    <script src="./bootstrap-5.2.3-dist/umd/popper.min.js"></script>
    <script src="./bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+   <script src="./js/form.js"></script>
+   <script>
+    function handleSubit() {
+      let elmName = document.getElementById("inputName");
+      let elmCity = document.getElementById("inputCity");
+      let elmAvatar = document.getElementById("inputAvatar");
+
+      let user = {
+        name: elmName.value,
+        city: elmCity.value,
+        avatar: elmAvatar.value,
+      };
+      console.log(user);
+      let user_post = 'https://63a06c4ce3113e5a5c3d38d4.mockapi.io/Bai1/user'
+      fetch(user_post, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", }, 
+        body: JSON.stringify(user),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  </script>
 </body>
 </html>

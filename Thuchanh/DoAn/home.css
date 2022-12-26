@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: Century;
+
+
+}
+.image img{
+
+height: 90vh;
+background-size: cover;
+background-position: center;
+min-height: 100px;
+width: 100%;
+
+}
+
+    
+.title{
+    
+    position: absolute;
+    top: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:black;
+}
+

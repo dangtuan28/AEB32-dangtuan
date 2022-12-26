@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Piece</title>
+    <link rel="stylesheet" href="./common.css" />
+
+    <link
+      rel="stylesheet"
+      href="../session03/web/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bg-light" id ="header">
+        
+    </header>
+    <h2 class="text-center">Thêm sản phẩm vào giỏ hàng</h2>
+    <div class="container">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th style="width: 50%">Tên sản phẩm</th>
+            <th style="width: 10%">Giá</th>
+            <th style="width: 8%">Số lượng</th>
+            <th style="width: 22%" class="text-center">Thành tiền</th>
+            <th style="width: 10%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-th="Product">
+              <div class="row">
+                <div class="col-sm-2 hidden-xs">
+                  <img
+                    src="https://st.quantrimang.com/photos/image/2022/04/08/Hinh-nen-Luffy-Sun-God-Nika-1.jpg"
+                    alt="Sản phẩm 1"
+                    class="img-responsive"
+                    width="100"
+                  />
+                </div>
+                <div class="col-sm-10">
+                  <h4 class="nomargin">Luffy</h4>
+                  <p>Luffy Thần Mặt Trời Nika</p>
+                </div>
+              </div>
+            </td>
+            <td data-th="Giá">99.000 đ</td>
+            <td data-th="Số lượng">
+              <input class="form-control text-center" value="1" type="number" />
+            </td>
+            <td data-th="Giá" class="text-center">99.000 đ</td>
+            <td class="actions" data-th="">
+              <button class="btn btn-info btn-sm">
+                <i class="fa fa-edit"></i>
+              </button>
+              <button class="btn btn-danger btn-sm">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-th="Product">
+              <div class="row">
+                <div class="col-sm-2 hidden-xs">
+                  <img
+                    src="https://s199.imacdn.com/ta/2018/03/24/090675d6814a918c_c44bfd1a60fff4dd_6809215218247115143215.jpg"
+                    alt="Sản phẩm 1"
+                    class="img-responsive"
+                    width="100"
+                  />
+                </div>
+                <div class="col-sm-10">
+                  <h4 class="nomargin">Zoro</h4>
+                  <p>Zoro Ác Quỷ Ashura</p>
+                </div>
+              </div>
+            </td>
+            <td data-th="Giá">99.000 đ</td>
+            <td data-th="Số lượng">
+              <input class="form-control text-center" value="1" type="number" />
+            </td>
+            <td data-th="Giá" class="text-center">99.000 đ</td>
+            <td class="actions" data-th="">
+              <button class="btn btn-info btn-sm">
+                <i class="fa fa-edit"></i>
+              </button>
+              <button class="btn btn-danger btn-sm">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="visible-xs">
+            <td class="text-center"><strong>Tổng 2</strong></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="" class="btn btn-warning"
+                ><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a
+              >
+            </td>
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center">
+              <strong>Tổng tiền 198.000 đ</strong>
+            </td>
+            <td>
+              <a href="" class="btn btn-success btn-block"
+                >Thanh toán <i class="fa fa-angle-right"></i
+              ></a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="../session03/web/bootstrap-5.2.3-dist/umd/popper.min.js"></script>
+    <script src="../session03/web/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="./form.js"></script>
+  </body>
+</html>
+ml

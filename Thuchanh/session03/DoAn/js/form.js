@@ -1,19 +1,16 @@
-// window.onload = function () {
-//     loadHeader();
-//   };
-//   function loadHeader() {
-//     let elm = document.getElementById("header");
-//     fetch("./header.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         elm.innerHTML = data;
-//         console.log(data);
-//       });
-//   }
- 
-  let button = document.getElementById("btn-send");
-  button.onclick = function ()
-   {alert
-    ("Bạn đã mua thành công"
-  );
-   }
+let nameInput = document.querySelector('input[name="name"]');
+let usernameInput = document.querySelector('input[name="email"]');
+
+let addressInput = document.querySelector('input[name="address"]');
+let button = document.getElementById("btn-send");
+button.onclick = function () {
+  if (
+    nameInput.value === "" ||
+    usernameInput.value === "" ||
+    addressInput.value === ""
+  ) {
+    alert("Thất bại,vui lòng nhập đầy đủ thông tin");
+  } else {
+    alert("Mua Thành Công");
+  }
+};

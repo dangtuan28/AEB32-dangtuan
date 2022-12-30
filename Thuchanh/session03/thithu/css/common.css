@@ -1,0 +1,17 @@
+.button__submit {
+    padding: 20px;
+    background-color: red;
+
+}
+.flex__05{
+    flex: 0.5;
+
+}
+.flex__1{
+    flex:1;
+}
+img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
